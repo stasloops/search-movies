@@ -1,0 +1,17 @@
+.pagination{
+    color: rgb(192, 33, 33);
+    display: flex;
+}
+
+.page__item{
+    background-color: #79c142;
+    padding: 10px 0px;
+    border-radius: 10px;
+    margin-right: 10px;
+    
+}
+
+.page__link{
+    color: #fff;
+    padding: 10px 15px;
+}
