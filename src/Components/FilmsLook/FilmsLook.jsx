@@ -1,23 +1,8 @@
 import React from 'react'
 import './FilmsLook.css'
 
-
 function FilmsLook({item}) {
-
     const items = item
-    // const KEY = 'c2918c64f136a280f575ff886f86f99e'
-
-    // const [item, setItem] = useState([])
-    // const [loading, setLoading] = useState(true)
-
-    //  useEffect(() => {
-    //     const getItems = async () =>{
-    //         const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=ru`)
-    //         setItem(response.data.result)
-    //         setLoading(false)
-    //     }
-    //     getItems()
-    // },[])
     
     return (<>
    <div className="description">

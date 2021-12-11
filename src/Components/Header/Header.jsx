@@ -4,8 +4,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 function Header({setGetValue, setGetSearch}) {
-    const setGetValues = setGetValue
-    const setGetSearchs = setGetSearch
     const navigate = useNavigate()
     const KEY = 'c2918c64f136a280f575ff886f86f99e'
 
@@ -25,8 +23,8 @@ function Header({setGetValue, setGetSearch}) {
       }, [value]);
   
       const submitValue = () => {
-        setGetValues(value)
-        setGetSearchs(search)
+        setGetValue(value)
+        setGetSearch(search)
         navigate('/')
         setValue('')
     }
@@ -35,7 +33,7 @@ function Header({setGetValue, setGetSearch}) {
         <header className="header">
         <div className="header_inner">
         <Link to='/'>
-            <div className="logo">animeserials</div>
+            <div className="logo">animeserial</div>
         </Link>
             <div className="menubtn">
                 <span></span>
