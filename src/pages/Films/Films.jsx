@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import "./Films.css"
-import FilmsItem from './FilmsItem/FilmsItem'
+import FilmsItem from '../../Components/FilmsItem/FilmsItem'
 import axios from 'axios'
 
 function Films({setItemid, getValue, getSearch}) {
@@ -13,13 +13,11 @@ function Films({setItemid, getValue, getSearch}) {
 
     useEffect(() => { 
       if (fetchin) {
-        axios
-          .get(
-            `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&page=${currentPage}&language=ru`,
+        axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&page=${currentPage}&language=ru`,
           )
-          .then((res) => {
+          .then((response) => {
             setLoadin(false);
-            setMovie([...movi, ...res.data.results])
+            setMovie([...movi, ...response.data.results])
             setCurrentPag((prevState) => prevState + 1); 
           })
           .finally(() => setFetchin(false));
@@ -37,13 +35,13 @@ function Films({setItemid, getValue, getSearch}) {
       setFetchin(true);
     }
   };
-
   useEffect(() => {
     document.addEventListener('scroll', scrollHandler);
     return function () {
       document.removeEventListener('scroll', scrollHandler);
     };
   }, []);
+  
 
     return (
         <main className="films">

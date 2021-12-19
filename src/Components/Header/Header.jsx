@@ -35,17 +35,6 @@ function Header({setGetValue, setGetSearch}) {
         <Link to='/'>
             <div className="logo">animeserial</div>
         </Link>
-            <div className="menubtn">
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </div>
-            <div className="back">
-                <div className="x"></div>
-
-            </div>
-            
             <div className="header_menu">
                 <div className="form">
                     <input placeholder="Найдите фильм"
